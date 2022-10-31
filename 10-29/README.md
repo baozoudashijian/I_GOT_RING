@@ -51,3 +51,24 @@
 ## React项目优化
 + 添加key值
 + shouldComponentUpdate生命周期优化不需要重新更新的组件
+
+## React中key的作用
+Key是React用于追踪列表中元素被修改、被添加或者移除的标识
+
+## 你对虚拟DOM和DIFF算法的理解
+虚拟DOM本质上是JavaScript对象，是对真实DOM的抽象表现。状态更新时记录新树和旧树的差异最后把差异更新到真实的DOM。
+
+## React的生命周期
++ constructor
++ getDerivedStateFromProps
++ shouldComponentUpdate
++ render
++ getSnopshotBeforeUpdate
++ componentDidUpdate
++ componentWillUnmount
+
+## React组件之间通信方式
++ 父传子：props
++ 子传父：callback回调
+
+## setState是同步还是异步
