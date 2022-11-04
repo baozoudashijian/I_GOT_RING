@@ -72,3 +72,10 @@ Key是React用于追踪列表中元素被修改、被添加或者移除的标识
 + 子传父：callback回调
 
 ## setState是同步还是异步
++ 在正常的react事件流中
+    + setState和useState是异步执行的（不会立即更新state结果）
+    + 多次执行setState和useState，只会调用一次重新渲染render，不同的是setState会进行state的合并，而useState不会。
++ 在setTimeout和、Promise.then等异步事件中
+    + setState和useState是同步执行的（立即更新state结果）
+    + 多次执行setState和useState，每次执行都会调用一次render
+

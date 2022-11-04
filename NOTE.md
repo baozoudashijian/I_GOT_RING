@@ -45,3 +45,43 @@ handleBars应用
 ### 异步面试题
 + 获取图片的宽度（缓存能立马拿到，不缓存为0-监听onload事件）
 + 循环添加监听事件（var改成let）
+
+### 回调的形式
+
+### Promise
++ 处理多个success
++ then捕获异常
+    + error回调捕获异常
+    + 错误抛向控制台
+
+### async/await
++ async和await都可以单独使用，但是特殊情况下必须加上async
+
+## 面向对象
+
+### 封装和继承
++ 封装：隐藏细节
++ 继承：复用
++ 多钛：
+
+### 原型链
++ 对象prototype（共）
+    + toString
+    + keys
+    + assign
++ 数组prototype（共）
+    + slice
+    + include
+    + join
++ 函数prototype（共）
+    + call
+    + apply
+    + bind
+
+### this（对象和函数）
++ 函数也是对象
++ 函数是一等公民，不是对象的附属品
++ 函数参数拆成this和arguments
+
+
+
