@@ -83,5 +83,8 @@ handleBars应用
 + 函数是一等公民，不是对象的附属品
 + 函数参数拆成this和arguments
 
-
+### new用法
++ 批量创建对象
++ 优化内存：提取公共方法
++ createSolider：封装隐藏细节
 
