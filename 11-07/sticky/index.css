@@ -1,3 +1,11 @@
+/* 组件提供样式 */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* 用户自己写的样式 */
 * {
     margin: 0;
     padding: 0;
@@ -10,21 +18,13 @@
     line-height: 60px;
 }
 #topbar.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     opacity: .5;
-}
-.topbarWrapper {
-    height: 60px;
 }
 main {
     background: #ddd;
     height: 1800px;
 }
 button.sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
+    top: 60px;
 }
