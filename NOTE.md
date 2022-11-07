@@ -88,3 +88,21 @@ handleBars应用
 + 优化内存：提取公共方法
 + createSolider：封装隐藏细节
 
+### 继承的写法
++ new就是把构造函数的写法固定下来
++ call继承私有属性
++ fakeHuman继承prototype属性 (Solider.prototype = Object.create(Human.prototype))
+```
+    function fakeHuman() { }
+    fakeHuman.prototype = Human.prototype
+    Solider.prototype = new fakeHuman() // 去除继承的私有属性
+```
+
+## 造轮子-组件实现思路
+
+### 轮子分类
++ UI轮子
+
+### 编程思想
++ 正交原则
++ 面向接口编程
