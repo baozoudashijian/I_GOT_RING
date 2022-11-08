@@ -5,7 +5,7 @@ class Dialog {
         this.init()
     }
     get template() {
-        let {title, content} = this.options
+        let { title, content } = this.options
         return `
             <div class="rongerWrapper">
                 <header class="rongerHeader">${title}</header>
@@ -16,19 +16,21 @@ class Dialog {
             </div>    
         `
     }
-    init() {
-        let {buttons} = this.options
-        let $buttons = buttons.map((buttonOptions) => {
+    generateButtons() {
+        let { buttons } = this.options
+        let buttonGroup = buttons.map((buttonOptions) => {
             let $b = $('<button></button>')
             $b.text(buttonOptions.text)
             $b.on('click', buttonOptions.action)
             return $b
         })
-        
+        return buttonGroup
+    }
+    init() {
         var $dialog = $(`<div class="rongerDialog"></div>`).html(this.template)
-        $dialog.find('footer').append($buttons)
+        $dialog.find('footer').append(this.generateButtons())
         this.$dialog = $dialog
-        
+
     }
     open() {
         this.$dialog.appendTo('body')
@@ -38,20 +40,20 @@ class Dialog {
     }
 }
 
-x.onclick = function() {
+x.onclick = function () {
     var dialog = new Dialog({
         title: '标题',
         content: '<b>欢迎</b>',
         buttons: [{
             text: '确定',
-            action: function() {
+            action: function () {
                 setTimeout(() => {
                     dialog.close()
                 }, 0)
             }
-        },{
+        }, {
             text: '取消',
-            action: function() {
+            action: function () {
                 dialog.close()
             }
         }]

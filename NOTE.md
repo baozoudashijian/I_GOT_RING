@@ -106,3 +106,9 @@ handleBars应用
 ### 编程思想
 + 正交原则
 + 面向接口编程
+
+### 封装组件
++ Tab
++ Sticky
++ Dialog
+
