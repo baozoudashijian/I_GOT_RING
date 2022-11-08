@@ -1,0 +1,30 @@
+.rongerSuggestion {
+    position: relative;
+    border: 1px solid red;
+    display: inline-block;
+}
+.rongerSuggestion-loading {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+.rongerSuggestion.loading .rongerSuggestion-loading {
+    display: block;
+}
+.rongerSuggestion-list {
+    position: absolute;
+    border: 1px solid green;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+.rongerSuggestion-empty {
+    display: none;
+}
+.rongerSuggestion.empty .rongerSuggestion-empty {
+    display: block;
+}
