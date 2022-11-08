@@ -4,23 +4,29 @@ class Dialog {
         this.options = options
         this.init()
     }
+    get template() {
+        let {title, content} = this.options
+        return `
+            <div class="rongerWrapper">
+                <header class="rongerHeader">${title}</header>
+                <div class="rongerBody">
+                    <main class="rongerMain">${content}</main>
+                    <footer class="rongerFooter"></footer>
+                </div>
+            </div>    
+        `
+    }
     init() {
-        let {title, content, buttons} = this.options
+        let {buttons} = this.options
         let $buttons = buttons.map((buttonOptions) => {
             let $b = $('<button></button>')
             $b.text(buttonOptions.text)
             $b.on('click', buttonOptions.action)
             return $b
         })
-        let template = `
-            <div>
-                <header>${title}</header>
-                <main>${content}</main>
-                <footer></footer>
-            </div>    
-        `
-        var $dialog = $(`<div></div>`).html(template)
-        $dialog.append($buttons)
+        
+        var $dialog = $(`<div class="rongerDialog"></div>`).html(this.template)
+        $dialog.find('footer').append($buttons)
         this.$dialog = $dialog
         
     }

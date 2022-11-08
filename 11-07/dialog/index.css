@@ -1,0 +1,29 @@
+.rongerDialog {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rongerWrapper {
+    background: white;
+}
+.rongerHeader {
+    border-bottom: 1px solid; 
+    padding: 5px;
+}
+.rongerBody {
+    padding: 20px;
+    min-width: 200px;
+}
+.rongerFooter {
+    text-align: right;
+    margin-top: 20px;
+}
+.rongerFooter button {
+    margin-left: 10px;
+}
