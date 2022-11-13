@@ -150,3 +150,22 @@ handleBars应用
 + [].slice.call(arrayLike)
 + Array.from(arrayLike)
 
+## Rx.js
+
+### 异步存在的三个问题
++ 变量难以被跟踪
++ 异步不能被try catch捕获
++ 内存泄漏（addEventlister后一定要记得removeEventListener）
+
+### 介绍Rx.js前的预备知识
++ 迭代器模式
++ 观察者模式
+
+### 使用数组api做些amazing事情
++ 展示评分最高的剧集给用户
++ 实现拖拽
+
+## 代码大全中编程技巧
+
+
+
